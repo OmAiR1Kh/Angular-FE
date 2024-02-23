@@ -9,31 +9,40 @@ table {
   border: 1px solid #dddddd;
   border-top: 3px solid green;
 }
+
 td,
 th {
   border-bottom: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 12px; /* Adjusted padding for better readability */
 }
 
 td {
-  font-size: 0.7rem;
+  font-size: 0.8rem; /* Slightly increased font size for better readability */
 }
 
-th {
+thead th {
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.8rem; /* Slightly increased font size for better readability */
   border: 1px solid #dddddd;
   background: rgb(244, 241, 241);
+  position: relative;
+}
+
+thead th i {
+  position: absolute;
+  right: 10px; /* Adjusted spacing for better alignment */
+  cursor: pointer;
+  color: lightgray;
 }
 
 .actions {
   display: flex;
   align-items: center;
-  padding: 10px;
-  justify-content: space-between;
+  padding: 14px;
 }
 
 .actions i {
   cursor: pointer;
+  margin-left: 5px; /* Adjusted margin for spacing between icons */
 }

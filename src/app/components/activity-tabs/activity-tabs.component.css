@@ -10,12 +10,22 @@
   align-items: center;
 }
 .activity-tabs p {
-  padding: 1rem;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  padding: 0.7rem;
+  border: 2px solid green;
+  border-bottom: none;
   cursor: pointer; /* Add cursor pointer for better indication */
 }
+
+.activity-tabs p:last-child {
+  border-left: none;
+}
+
+.activity-tabs p:first-child {
+  border-right: none;
+}
 .selected {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   color: white;
   background: green;
 }
