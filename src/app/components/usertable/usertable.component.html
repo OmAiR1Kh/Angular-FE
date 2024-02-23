@@ -1,4 +1,10 @@
-<div class="container">
+<div class="table-container">
+  <app-tabs [tab]="tab" [click]="setTab"></app-tabs>
+  <app-activity-tabs
+    [innerTab]="innerTab"
+    [click]="setInnerTab"
+  ></app-activity-tabs>
+
   <table>
     <thead>
       <tr>
@@ -7,11 +13,32 @@
         <th>FIRST NAME</th>
         <th>TERRETORY</th>
         <th>DESK</th>
-        <th></th>
-        <th></th>
-        <th></th>
+        <th>PROFILE</th>
+        <th>UID</th>
+        <th>STATUS</th>
+        <th>TRIGRAM</th>
+        <th>LOCATION</th>
+        <th>ACTION</th>
       </tr>
     </thead>
-    <tbody></tbody>
+    <tbody>
+      <tr *ngFor="let u of user">
+        <td>{{ u.id }}</td>
+        <td>{{ u.lastname }}</td>
+        <td>{{ u.firstname }}</td>
+        <td>{{ u.territory }}</td>
+        <td>{{ u.desk }}</td>
+        <td>{{ u.profile }}</td>
+        <td>{{ u.uid }}</td>
+        <td>{{ u.status }}</td>
+        <td>{{ u.trigram }}</td>
+        <td>{{ u.location }}</td>
+        <td class="actions">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-regular fa-clock"></i>
+          <i class="fa-solid fa-trash"></i>
+        </td>
+      </tr>
+    </tbody>
   </table>
 </div>

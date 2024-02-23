@@ -4,7 +4,7 @@ import { UsertableComponent } from './components/usertable/usertable.component';
 
 const routes: Routes = [
   {
-    path: "user",
+    path: "admin",
     component: UsertableComponent
   }
 ];

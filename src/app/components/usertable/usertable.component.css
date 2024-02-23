@@ -1,0 +1,39 @@
+.table-container {
+  width: 95%;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #dddddd;
+  border-top: 3px solid green;
+}
+td,
+th {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+td {
+  font-size: 0.7rem;
+}
+
+th {
+  font-weight: 600;
+  font-size: 0.7rem;
+  border: 1px solid #dddddd;
+  background: rgb(244, 241, 241);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.actions i {
+  cursor: pointer;
+}

@@ -1,0 +1,30 @@
+<div class="activity-tabs-container">
+  <div class="activity-tabs">
+    <p (click)="click('active')" [class.selected]="innerTab === 'active'">
+      ACTIVE
+    </p>
+    <p (click)="click('inactive')" [class.selected]="innerTab === 'inactive'">
+      INACTIVE
+    </p>
+    <p (click)="click('all')" [class.selected]="innerTab === 'all'">ALL</p>
+  </div>
+  <div class="activity-items">
+    <button>
+      <i class="fa-solid fa-plus"></i>
+      CREATE USER
+    </button>
+    <button>
+      <i class="fa-solid fa-upload"></i>
+      EXPORT TO EXCEL
+    </button>
+    <button>
+      <i class="fa-solid fa-download"></i>
+      IMPORT FROM EXCEL
+    </button>
+    <div class="search-input">
+      <input type="text" placeholder="Search" class="search" />
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <i class="fa-solid fa-gear"></i>
+  </div>
+</div>
