@@ -28,7 +28,7 @@ td {
 
 thead th {
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.8rem; /* Slightly increased font size for better readability */
   border: 1px solid #dddddd;
   background: rgb(244, 241, 241);
   position: relative;
@@ -64,5 +64,3 @@ thead th i {
   cursor: pointer;
   margin-left: 5px;
 }
-
-

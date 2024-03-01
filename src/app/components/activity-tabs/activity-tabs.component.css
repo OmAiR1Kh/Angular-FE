@@ -10,7 +10,7 @@
   align-items: center;
 }
 .activity-tabs p {
-  padding: 0.7rem;
+  padding: 0.5rem;
   border: 2px solid green;
   border-bottom: none;
   cursor: pointer; /* Add cursor pointer for better indication */
@@ -20,9 +20,22 @@
   border-left: none;
 }
 
+.activity-tabs .selected:first-child {
+  border-top-right-radius: 0;
+}
+
+.activity-tabs .selected:last-child {
+  border-top-left-radius: 0;
+}
+
 .activity-tabs p:first-child {
   border-right: none;
 }
+
+.export-btn {
+  position: relative;
+}
+
 .selected {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -72,4 +85,83 @@
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border: none;
   width: 250px;
+}
+
+.export-btn button {
+  background: white !important;
+  color: green !important;
+  border: 1px solid green;
+}
+
+.export-btn .options {
+  position: absolute;
+  width: 90%;
+  background: green;
+  color: white;
+  z-index: 9;
+  top: 35px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.options p:first-child {
+  border-bottom: 1px solid white;
+}
+
+.options p {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.option:before {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40px;
+  right: auto;
+  top: 8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: green transparent transparent transparent;
+}
+
+.options:after {
+  content: " ";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 5px;
+  rotate: -90deg;
+  right: auto;
+  top: -8px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: green transparent transparent transparent;
+}
+
+.settings-container {
+  position: relative;
+}
+
+.settings-container .settings {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  background: green;
+  color: white;
+  z-index: 4;
+  width: 150px;
+}
+
+.settings-container .settings {
+  padding: 0.5rem;
+}
+
+.settings-container .settings div {
+  padding: 0.5rem;
+}
+
+.settings-container .settings div span {
+  cursor: pointer;
 }

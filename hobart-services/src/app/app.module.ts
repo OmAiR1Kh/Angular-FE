@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AgGridAngular, AgGridModule } from 'ag-grid-angular';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -9,8 +9,6 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { ActivityTabsComponent } from './components/activity-tabs/activity-tabs.component';
 import { FilterByActivePipe } from './components/usertable/filter-by-active-pipe';
 import { CreateUserComponent } from './components/create-user/create-user.component';
-import { GridComponentComponent } from './components/grid-component/grid-component.component';
-import { TableButtonsComponent } from './components/table-buttons/table-buttons.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +19,8 @@ import { TableButtonsComponent } from './components/table-buttons/table-buttons.
     ActivityTabsComponent,
     FilterByActivePipe,
     CreateUserComponent,
-    GridComponentComponent,
-    TableButtonsComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    AgGridModule.withComponents([AgGridAngular, TableButtonsComponent])
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
   exports: [FilterByActivePipe],

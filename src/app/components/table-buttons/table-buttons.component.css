@@ -1,0 +1,17 @@
+.table-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.table-buttons i {
+  cursor: pointer;
+}
+
+.table-buttons .fa-pen-to-square {
+  color: green;
+}
+
+.table-buttons .fa-trash {
+  color: red;
+}

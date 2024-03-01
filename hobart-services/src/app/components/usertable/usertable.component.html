@@ -1,0 +1,89 @@
+<div class="table-container">
+  <app-tabs [tab]="tab" [click]="setTab"></app-tabs>
+  <app-activity-tabs
+    [showAdd]="handleAdd.bind(this)"
+    [innerTab]="innerTab"
+    [click]="setInnerTab.bind(this)"
+  ></app-activity-tabs>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 30px"># <i class="fa-solid fa-sort"></i></th>
+        <th>LAST NAME <i class="fa-solid fa-sort"></i></th>
+        <th>FIRST NAME <i class="fa-solid fa-sort"></i></th>
+        <th>TERRETORY <i class="fa-solid fa-sort"></i></th>
+        <th>DESK <i class="fa-solid fa-sort"></i></th>
+        <th>PROFILE <i class="fa-solid fa-sort"></i></th>
+        <th>UID <i class="fa-solid fa-sort"></i></th>
+        <th>STATUS <i class="fa-solid fa-sort"></i></th>
+        <th>TRIGRAM <i class="fa-solid fa-sort"></i></th>
+        <th>LOCATION <i class="fa-solid fa-sort"></i></th>
+        <th>ACTION</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="innerTab === 'all'">
+      <tr *ngFor="let u of user">
+        <td>{{ u.id }}</td>
+        <td>{{ u.lastname }}</td>
+        <td>{{ u.firstname }}</td>
+        <td>{{ u.territory }}</td>
+        <td>{{ u.desk }}</td>
+        <td>{{ u.profile }}</td>
+        <td>{{ u.uid }}</td>
+        <td>{{ u.status }}</td>
+        <td>{{ u.trigram }}</td>
+        <td>{{ u.location }}</td>
+        <td class="actions">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-regular fa-clock"></i>
+          <i class="fa-solid fa-trash"></i>
+        </td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="innerTab === 'active'">
+      <tr *ngFor="let u of activeUsers">
+        <td>{{ u.id }}</td>
+        <td>{{ u.lastname }}</td>
+        <td>{{ u.firstname }}</td>
+        <td>{{ u.territory }}</td>
+        <td>{{ u.desk }}</td>
+        <td>{{ u.profile }}</td>
+        <td>{{ u.uid }}</td>
+        <td>{{ u.status }}</td>
+        <td>{{ u.trigram }}</td>
+        <td>{{ u.location }}</td>
+        <td class="actions">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-regular fa-clock"></i>
+          <i class="fa-solid fa-trash"></i>
+        </td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="innerTab === 'inactive'">
+      <tr *ngFor="let u of inactiveUsers">
+        <td>{{ u.id }}</td>
+        <td>{{ u.lastname }}</td>
+        <td>{{ u.firstname }}</td>
+        <td>{{ u.territory }}</td>
+        <td>{{ u.desk }}</td>
+        <td>{{ u.profile }}</td>
+        <td>{{ u.uid }}</td>
+        <td>{{ u.status }}</td>
+        <td>{{ u.trigram }}</td>
+        <td>{{ u.location }}</td>
+        <td class="actions">
+          <i class="fa-solid fa-pen"></i>
+          <i class="fa-regular fa-clock"></i>
+          <i class="fa-solid fa-trash"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="showAdd == true" class="create-container">
+  <app-create-user
+    [hideShow]="hideAdd"
+    [handleHide]="hideAddF.bind(this)"
+  ></app-create-user>
+</div>

@@ -1,0 +1,233 @@
+.container {
+  transform: translate(30%, 10%);
+  font-size: 0.8rem;
+  background: #fff;
+  width: 60%;
+  overflow-y: scroll;
+  /* margin: auto; */
+  height: 500px;
+}
+
+.head {
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.dataContainer {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.bodyHead {
+  color: white;
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  /* font-size: 1.5rem; */
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.createUser,
+.userPref {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  gap: 2rem;
+}
+
+.createUser div {
+  width: 50%;
+}
+
+.createUser div div {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+}
+
+.createUser div div label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  width: 7rem;
+}
+
+.createUser div div input {
+  width: calc(100% - 8rem);
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+}
+
+.createUser div div .search-input {
+  margin: 0;
+  position: relative;
+  width: calc(100% - 8rem);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+}
+.createUser div div .search-input input {
+  width: 100%;
+}
+.createUser div div .search-input i {
+  position: absolute;
+  top: 16%;
+  right: 15px;
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+select:focus {
+  outline: none;
+  border: none;
+}
+
+.mirrorContainer {
+  width: 100%;
+}
+.mirror {
+  display: flex;
+  margin: 2rem 0;
+}
+.mirror .search-input {
+  position: relative;
+  width: 50%;
+}
+.mirror label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  width: 13rem;
+}
+
+.mirror .search-input i {
+  position: absolute;
+  top: 16%;
+  right: 15px;
+}
+
+.mirror .search-input input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+  width: 100%;
+}
+
+.mirror .search-input input:focus {
+  outline: none;
+  border: none;
+}
+
+.userPref .firstColumn {
+  width: 60%;
+}
+.userPref div {
+  width: 40%;
+}
+.userPref div div {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.userPref div div label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  width: 8rem;
+}
+
+.userPref select#timeZone {
+  padding: 0.5rem;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+  width: calc(100% - 9rem);
+}
+
+.userPref select {
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+  width: 50%;
+}
+.lang {
+  margin-left: 3rem;
+}
+.lang label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  width: 7rem;
+}
+
+.rights {
+  margin: 2rem 0;
+  font-size: 0.8rem;
+}
+
+.rights div {
+  margin: 1rem 0;
+}
+
+.rights div label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  width: 10rem;
+}
+
+.rights div select {
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+  width: 50%;
+}
+.rights div input {
+  margin-right: 0.5rem;
+}
+
+.rights .check {
+  margin-right: 1rem;
+}
+
+.bodyContainer {
+  border-bottom: 2px solid black;
+}
+.buttons {
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+}
+.buttons button {
+  padding: 10px;
+  margin-left: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}
+.cancel {
+  background-color: red;
+}
+.submit {
+  background-color: green;
+}

@@ -9,22 +9,56 @@
     <p (click)="click('all')" [class.selected]="innerTab === 'all'">ALL</p>
   </div>
   <div class="activity-items">
-    <button>
+    <button (click)="showAdd()">
       <i class="fa-solid fa-plus"></i>
       CREATE USER
     </button>
-    <button>
-      <i class="fa-solid fa-upload"></i>
-      EXPORT TO EXCEL
-    </button>
-    <button>
+    <div
+      class="export-btn"
+      (mouseover)="showValues = true"
+      (mouseleave)="showValues = false"
+    >
+      <button>
+        <i class="fa-solid fa-upload"></i>
+        EXPORT TO EXCEL
+      </button>
+      <div class="options" *ngIf="showValues == true" style="font-size: 0.8rem">
+        <p (click)="downloadAll()">ALL DATA</p>
+        <p (click)="downloadShown()">VISIBLE DATA</p>
+      </div>
+    </div>
+    <button (click)="clickInput()">
       <i class="fa-solid fa-download"></i>
       IMPORT FROM EXCEL
+      <input
+        type="file"
+        accept=".csv"
+        style="display: none"
+        id="importCsv"
+        (change)="logToConsole($event)"
+      />
     </button>
     <div class="search-input">
       <input type="text" placeholder="Search" class="search" />
       <i class="fa-solid fa-magnifying-glass"></i>
     </div>
-    <i class="fa-solid fa-gear"></i>
+    <div class="settings-container">
+      <i
+        class="fa-solid fa-gear"
+        style="cursor: pointer"
+        (click)="showSettingsF()"
+      ></i>
+      <div class="settings" *ngIf="showSettings == true">
+        <p
+          (click)="showSettings = false"
+          style="cursor: pointer; width: max-content"
+        >
+          X
+        </p>
+        <div *ngFor="let header of headers">
+          <span>{{ header }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

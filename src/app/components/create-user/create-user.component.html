@@ -1,0 +1,147 @@
+<div class="container">
+  <div class="bodyContainer">
+    <div class="head">
+      <div>Create user: lorem ipsum</div>
+      <div (click)="handleHide()" style="cursor: pointer">X</div>
+    </div>
+    <div class="dataContainer">
+      <div class="bodyHead">
+        <div>User identification</div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <form action="" class="createUser">
+        <div class="column1">
+          <div>
+            <label for="UID">UID : </label>
+            <div class="search-input">
+              <input
+                type="text"
+                name=""
+                id=""
+                class="search"
+                placeholder="Search"
+              />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <div>
+            <label for="lastName">Last name :</label>
+            <input type="text" name="lastName" id="lastName" />
+          </div>
+          <div>
+            <label for="phone">Phone :</label>
+            <input type="text" name="phone" id="phone" />
+          </div>
+        </div>
+        <div class="column2">
+          <div>
+            <label for="firstName">First name :</label>
+            <input type="text" name="firstName" id="firstName" />
+          </div>
+          <div>
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div>
+            <label for="trigram">Trigram :</label>
+            <input type="text" name="trigram" id="trigram" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="dataContainer">
+      <div class="bodyHead">
+        <div>Mirror UID</div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <form action="" class="mirrorContainer">
+        <div class="mirror">
+          <label for="emailSearch">Please select mirror UID:</label>
+          <div class="search-input">
+            <input
+              type="text"
+              name=""
+              id=""
+              class="search"
+              placeholder="Email Search"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="dataContainer">
+      <div class="bodyHead">
+        <div>user preferences</div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <form action="" class="userPref">
+        <div class="firstColumn">
+          <div>
+            <label for="timeZone">TimeZone :</label>
+            <select name="timeZome" id="timeZone">
+              <option value="">Choose a value</option>
+            </select>
+          </div>
+          <div>
+            <label for="location">Location :</label>
+            <select name="location" id="location">
+              <option value="">Select</option>
+            </select>
+          </div>
+        </div>
+        <div class="lang">
+          <label for="language">Language :</label>
+          <select name="language" id="language">
+            <option value="">Select</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <div class="dataContainer">
+      <div class="bodyHead">
+        <div>Rights Management</div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <form action="" class="rights">
+        <div>
+          <label for="profile">Profile :</label>
+          <select name="profile" id="profile">
+            <option value="">Select</option>
+          </select>
+        </div>
+        <div>
+          <label for="rights">Specific Rights :</label>
+          <span class="check">
+            <input type="checkbox" name="tier1" />Tier 1
+          </span>
+          <span class="check">
+            <input type="checkbox" name="tier1" />Tier 1
+          </span>
+        </div>
+        <div>
+          <label for="tiers">Created Tiers :</label>
+          <span class="check">
+            <input type="checkbox" name="tier1" />Tier 1
+          </span>
+          <span class="check">
+            <input type="checkbox" name="tier1" />Tier 1
+          </span>
+        </div>
+        <div>
+          <label for="tiers">Created Tiers :</label>
+          <span class="check">
+            <input type="checkbox" name="tier1" />Tier 1
+          </span>
+          <span class="check">
+            <input type="checkbox" name="tier1" />Tier 1
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="buttons">
+    <button class="cancel" (click)="handleHide()">Cancel</button>
+    <button class="submit">Submit</button>
+  </div>
+</div>

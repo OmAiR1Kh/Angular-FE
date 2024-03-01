@@ -1,0 +1,75 @@
+.activity-tabs-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-tabs {
+  display: flex;
+  align-items: center;
+}
+.activity-tabs p {
+  padding: 0.7rem;
+  border: 2px solid green;
+  border-bottom: none;
+  cursor: pointer; /* Add cursor pointer for better indication */
+}
+
+.activity-tabs p:last-child {
+  border-left: none;
+}
+
+.activity-tabs p:first-child {
+  border-right: none;
+}
+.selected {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  background: green;
+}
+
+.activity-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.activity-items button:first-child {
+  color: white;
+  background: green;
+}
+
+.activity-items button:not(:first-child) {
+  color: green;
+  background: transparent;
+  border: 1px solid green;
+}
+
+.activity-items button {
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+.search-input {
+  position: relative;
+  width: 250px;
+}
+
+.search-input i {
+  position: absolute;
+  top: 16%;
+  right: 5px;
+}
+
+.search-input input {
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: none;
+  width: 250px;
+}
